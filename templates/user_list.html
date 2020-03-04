@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <script type="text/javascript">
+        <!--var button = document.querySelectorAll("button")[0];-->
+        <!--button.addEventListener('click', function() {-->
+            <!--if (button.getAttribute("data-text-swap") == button.innerHTML) {-->
+                <!--button.innerHTML = button.getAttribute("data-text-original");-->
+            <!--} else {-->
+                <!--button.setAttribute("data-text-original", button.innerHTML);-->
+                <!--button.innerHTML = button.getAttribute("data-text-swap");-->
+            <!--}-->
+        <!--}, false);-->
+
+    </script>
+</head>
+<body>
+    {% block body %}
+    {% for user in userD %}
+    <div class="row">
+        <div class="col-md3"></div>
+        <div class="panel panel-default col-md-6">
+            <div class="col-md-4">
+                <img src="{{user.profile_pic}}" class="img-circle" width="120" height="120">
+
+            </div>
+            <div class="col-md-4">
+                <h4>
+                    <a href="/profile/{{user.id}}">{{user.username}}</a>
+                </h4>
+            </br>
+                <b>{{user.location}}</b>
+                </br>
+                </br>
+                <div class="col-md-4">
+                    <div class="btn btn-success" onclick="window.location.href = 'http://127.0.0.1:5000/profile/{{user.id}}'">View Profile</div>
+                    <div class="mt-10"></div>
+                    <div class="btn btn-primary" onclick="window.location.href = 'http://127.0.0.1:5000/profile/{{user.id}}'">Send Friend Request</div>
+                    <!--<button onclick="">Send Friend Request</button>-->
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    {% endfor %}
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <title></title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Flask Social</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a hrf="http://127.0.0.1:5000/profile">Home</a></li>
+                <li><a href="http://127.0.0.1:5000/editprofile">Edit Profile</a></li>
+                <li><a href="http://127.0.0.1:5000/posting">Posting</a></li>
+                <li><a href="http://127.0.0.1:5000/feed">Feed</a></li>
+                <li><a href="http://127.0.0.1:5000/user_list">Find Friends</a></li>
+                <li><a href="http://127.0.0.1:5000/logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>

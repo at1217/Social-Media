@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Welcome {{ oneUser.username }}</h1>
+    <form method="post" action="add_post">
+        <input id="pcontent" type="text" name="pcontent"/>
+        <input id="pemail" type="hidden" name="pemail" value="{{ now_user.email }}"/>
+        <input id="datetime" type="hidden" name="datetime" value="{{timestamp}}"/>
+        <input type="submit"/>
+    </form>
+</body>
+</html>
