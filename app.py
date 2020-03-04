@@ -8,11 +8,11 @@ from datetime import datetime
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:A20190499n@localhost/flasksocial'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:XXXXX@localhost/flasksocial'
 app.config['SECRET_KEY'] = 'super-secret'
 app.config['SECURITY_REGISTERABLE'] = True
-app.config['SECURITY_PASSWORD_HASH'] = 'bcrypt'
-app.config['SECURITY_PASSWORD_SALT'] = '$2a$16$PnnIgfMwkOjGX4SKHqSOPP'
+app.config['SECURITY_PASSWORD_HASH'] = 'XXXXX'
+app.config['SECURITY_PASSWORD_SALT'] = 'XXXXX'
 db = SQLAlchemy(app)
 
 
